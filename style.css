@@ -1,0 +1,586 @@
+
+body {
+    font-family: Raleway;
+}
+
+
+.rows{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    width: 90%;
+}
+
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+.hd{
+    grid-area: 1/1/2/12;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.hd i{
+    border-radius: 50%;
+    background-color:#0065fc;
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+.logo_menu img{
+    margin-top: 0.5rem;
+    margin-bottom: -15px;
+    padding-left: auto;
+    height: 5rem;
+    width: auto;
+}
+
+.logo_menu{
+    display: flex;
+    margin-bottom: 0.5px;
+}
+
+.logo_menu ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: auto;
+    width: 400px;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+.logo_menu a{
+    text-decoration: none;
+    color:  #0065fc;
+    font-weight: bold;
+}
+
+.disabled:nth-child(2) a{
+    color:grey;
+}
+
+a:hover{
+    text-transform: uppercase;
+    color: grey;
+    transition: all 2s;
+}
+
+h6{
+    margin-top: 0;
+    filter:blur(0.70px);
+    margin-top: -15px;
+}
+
+input{
+    border-radius:10px;
+    border-style: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+.filtres{
+    border-radius: 10px 10px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.filtres i{
+    width: 30px;
+    background: #deebff; 
+    color:#0065fc;
+    border-radius: 20px;
+    border: 0.1rem solid #deebff;
+    margin-right: auto;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    margin-left: -5px;
+}
+
+.filtres button{
+    border-radius: 20px;
+    border: 0.1rem solid #F2F2F2;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 5px;
+    transition: all 0.3s;
+}
+
+.filtres button:hover{
+    background-color: #deebff;
+}
+
+.recherche{
+    margin-bottom: 15px;
+}
+
+.recherche img{
+    width: 16px;
+    height: 19px;
+    float: left;
+    border-radius: 10px;
+    border: 0.1rem solid #F2F2F2;
+    background: #0065fc; 
+    margin-bottom: -4px;
+}
+
+.recherche button{
+    background-color: #0065fc; 
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 33px;
+    margin-left: -10px;
+}
+
+.recherche input{
+    margin-left: 5px;
+    height: 30px;
+}
+
+.recherche i{
+    margin-right: auto;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius:0;
+    width: 30px;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+}
+
+.exclamation{
+    color:#0065fc;
+    font-weight: bold;
+    filter:blur(0.70px);
+    margin-right: 10px;
+    background-color: lightyellow;
+    border-radius: 50px;
+    border: 5px solid #F2F2F2;
+}
+
+.hd p{
+    filter:blur(0.70px);
+}
+
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+.bg_main{
+    grid-area: 2/1/3/8;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    margin-right: 1rem;
+    border-radius: 15px;
+    background-color: #F2F2F2;  
+}
+
+.bg_main h1{
+    margin-left: 1rem;
+}
+
+.bg_main h3{
+    margin-left: 1rem;
+}
+
+#main{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(300px, auto);
+    justify-content: space-around;
+    text-align: justify;
+    align-items: center;
+    grid-gap:20px;
+}
+
+#main img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.La_Cannebiere, .Hotel_du_port, .Les_mouettes, .Hotel_de_la_mer, .Le_Panier, .Chez-Amina{
+    border-radius: 15px;
+    background-color: white;
+    box-sizing: border-box;
+    width: auto;
+    height: 280px;
+    padding-right: 8px;
+}
+
+#main h5{
+    margin-top: -1px;
+    margin-left: 1rem;
+}
+
+#main .prix{
+    margin-top: -20px;
+    margin-left: 1rem;
+}
+
+.avis_etoiles {
+    color: #0065fc;
+    margin-top: 6px;
+    margin-left: 1rem;
+}
+
+.La_Cannebiere i:last-child{
+    color: lightgrey;
+}
+
+.Les_mouettes i:last-child{
+    color: lightgrey;
+}
+
+.Le_Panier i:last-child{
+    color: lightgrey;
+}
+
+.Hotel_de_la_mer i:nth-child(n+4){
+    color: lightgrey;
+}
+
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+.bg_sd{
+    grid-area: 2/8/3/12;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    background-color:#F2F2F2;
+}
+
+.bg_sd .title_chart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-chart-line{
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+.title_chart h1{
+    padding-left: 1rem;
+}
+
+.sidebar{
+    height: 90%;
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 15px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    margin: 1rem;
+    display: grid;
+    grid-gap:20px;
+}
+
+.sidebar img{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 20px;
+    margin-bottom: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    float: left;
+    object-fit: cover;
+    width: 40%;
+    height: 200px;
+    border-radius: 15px;
+    grid-gap:20px;
+}
+
+.avis_etoiles1, .avis_etoiles2, .avis_etoiles3{
+    color: #0065fc;
+    margin-top: 86px;
+}
+
+.Au_coeur_de_leau i:last-child{
+    color: lightgrey;
+}
+
+.Tout_bleu_et_blanc i:last-child{
+    color: lightgrey;
+}
+
+.sidebar .nom1 .prix1 .avis_etoiles1{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.sidebar .nom2 .prix2 .avis_etoiles2{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: -4px;
+}
+
+.prix1, .prix2, .prix3{
+    margin-top: -15px;
+}
+
+.sidebar .nom3 .prix3 .avis_etoiles3{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.Soleil_du_matin, .Au_coeur_de_leau, .Tout_bleu_et_blanc{
+    background-color: white;
+    border-radius: 15px;
+    object-fit: cover;
+    height: 208px;
+    width: 100%;
+}
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+.bg_sec{
+    grid-area: 4/1/5/12;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.bg_sec h1{
+    margin-bottom: -15px;
+}
+
+.bg_sec h5{
+    margin-left: 1rem;
+}
+
+#section{
+    margin-right: 1rem;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-sizing:border-box;
+    display: grid;
+    justify-content: space-around;
+    text-align: justify;
+    align-items: center;
+    padding-top: 1rem;
+    grid-gap:20px;
+    height: 500px;
+}
+
+#section img{
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    object-fit: cover;
+    margin-top: 20px;
+    padding-top: -15px;
+    width: 300px;
+    height: 100%;
+}
+
+.Fort_Pomegues {
+    grid-area: 1/2/2/3;
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 300px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.Iles_du_Frioul {
+    grid-area: 3/2/4/3;
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 200px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.ND_de_Garde {
+    grid-area: 1/4/2/5;
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 250px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.Longchamp {
+    grid-area: 3/4/4/5;
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 250px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.vieux_Port {
+    grid-area: 1/1/4/2;
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 500px;
+    padding-right: 0;
+}
+
+.Parc_des_Calanques {
+    grid-area: 1/3/4/4;
+    object-fit: cover;
+    height: 500px;
+    grid-gap: 20px;
+    padding-right: 0;
+}
+
+.vieux_Port img{
+    object-fit: cover;
+    grid-gap: 20px;
+    height: 100%;
+}
+
+.Parc_des_Calanques img{
+    object-fit: cover;
+    height: 100%;
+    grid-gap: 20px;
+}
+
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+.ft{
+    grid-area: 5/1/6/12;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+    margin-bottom: -15px;
+    margin-top: 100px;
+}
+
+.footer{
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-between;    
+    text-align: left;
+    width: 852px;
+}
+
+.footer ul li{
+    list-style-type: none;
+    margin-left: -40px;
+    margin-right: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer h5{
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
+
+
+@media screen and (max-width: 1200px){
+    body {
+        padding: 2rem 2rem;
+        text-align: justify;
+    }
+
+    .rows{
+        display: block;
+    }
+
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+    .bg_sd{
+        padding-top: 1rem;
+        margin-top: 1rem;
+        border-radius: 15px;
+    }
+
+    .sidebar{
+        display: flex; 
+    }
+    
+    .sidebar img{
+        float: none;
+        width: 200px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 4px;
+        padding-right: 20px;
+        margin-bottom: 6px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        float: left;
+        object-fit: cover;
+        width: 40%;
+        height: 200px;
+        border-radius: 15px;
+        grid-gap:20px;
+    }
+    /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+    
+    .Fort_Pomegues {
+        grid-area: 1/2/2/3;
+    }
+
+    .Iles_du_Frioul {
+        grid-area: 2/2/3/3;
+    }
+
+    .ND_de_Garde {
+        grid-area: 2/1/3/2;
+    }
+
+    .Longchamp {
+        grid-area: 2/3/3/4;
+    }
+
+    .vieux_Port {
+        grid-area: 1/1/2/2;
+    }
+
+    .Parc_des_Calanques {
+        grid-area: 1/3/2/4;
+    }
+
+
+    .footer{
+        justify-content: none;
+    }
+}
+
