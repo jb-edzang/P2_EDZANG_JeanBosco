@@ -3,7 +3,6 @@ body {
     font-family: Raleway;
 }
 
-
 .rows{
     display: grid;
     margin-left: auto;
@@ -217,7 +216,6 @@ input{
     grid-template-columns: repeat(3,1fr);
     grid-auto-rows: minmax(300px, auto);
     justify-content: space-around;
-    text-align: justify;
     align-items: center;
     grid-gap:20px;
 }
@@ -227,8 +225,8 @@ input{
     width: 100%;
     height: 200px;
     border-radius: 15px;
-    padding-top: 4px;
-    padding-left: 4px;
+    padding-top: 8px;
+    padding-left: 8px;
     padding-bottom: 10px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
@@ -315,11 +313,11 @@ input{
 }
 
 .sidebar img{
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
     padding-right: 20px;
-    margin-bottom: 6px;
+    padding-bottom: 8px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     float: left;
@@ -400,7 +398,6 @@ input{
     box-sizing:border-box;
     display: grid;
     justify-content: space-around;
-    text-align: justify;
     align-items: center;
     padding-top: 1rem;
     grid-gap:20px;
@@ -416,7 +413,6 @@ input{
     border-bottom-right-radius: 0;
     object-fit: cover;
     margin-top: 20px;
-    padding-top: -15px;
     width: 320px;
     height: 100%;
 }
@@ -526,7 +522,6 @@ input{
 @media screen and (max-width: 1200px){
     body {
         padding: 2rem 2rem;
-        text-align: justify;
     }
 
     .rows{
@@ -544,7 +539,6 @@ input{
         border-right: none;
         margin-bottom: 0;
     }
-
 
     /* sd toujours en flex et img en float */
 
@@ -568,36 +562,41 @@ input{
     #section {
         height: 300px;
         margin-bottom: 2rem;
-        
     }
 
     #section img{
         margin-bottom: -25px;
-        width: 80%;
+        width: 90%;
     }
+
     .Fort_Pomegues {
         grid-area: 1/2/2/3;
         height: 140px;
     }
+    
     .Iles_du_Frioul {
         grid-area: 2/2/3/3;
         height: 140px;
         margin-top: 20px;
     }
+
     .ND_de_Garde {
         grid-area: 2/1/3/2;
         height: 140px;
         margin-top: 20px;
     }
+
     .Longchamp {
         grid-area: 2/3/3/4;
         height: 140px;
         margin-top: 20px;
     }
+
     .vieux_Port {
         grid-area: 1/1/2/2;
         height: 140px;
     }
+
     .Parc_des_Calanques {
         grid-area: 1/3/2/4;
         height: 140px;
@@ -605,84 +604,240 @@ input{
 
     .footer{
         margin-top: 1rem;
-        justify-content:space-between;    
-        text-align: left;
         height: 100%;
         width: 80%;
+        padding-left: 40px;
         grid-gap:50px;  
     }
 
+    .footer h5{
+        padding-top: 20px;
+    }
 }
+
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 
 @media all and (max-width:700px){
 
-    /* Plusieurs modifications dans le hd */
-
-    .liseret{
-        border: none;
+    .rows{
+        width: 450px;
+        box-sizing: border-box;
     }
 
     .hd{
+        /* margin-left: 25px; */
+        width: 380px;
+    }
+
+    .hd h1{
+        width: 320px;
+    }
+
+    h6{
+        filter:blur(0.50px);
+        margin-top: 15px;
+        font-size: 18px;
+        width: 460px;
+    }
+
+    .liseret{
+        border: none;
         position: relative;
-        border: 1px solid #0065fc;
-        border-bottom-right-radius: 55px;
-        border-top-left-radius: 55px;
-        border-top-right-radius: 0;
-        border-left: 4px solid #0065fc;
+        border-bottom: 3px solid #0065fc;
+        top: 90px;
+        margin-left: -20px;
+        width: 200px;
     }
 
     .logo_menu{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 0;
+        padding-left: 0;
+        transition: 0.2s;
     }
 
     .logo_menu ul{
-        justify-content: space-around;
-        margin-left: 20%;
-        margin-right: 35%;
-        width: 60%;
-        margin-top: 35px;
+        flex-wrap: wrap-reverse;
+        grid-gap: 25px;
+        width: 250px;
+    }
+
+    .logo_menu li:nth-child(3){
+        margin-left: 150px;
+    }
+
+    .logo_menu li:nth-child(1){
+        margin-left: -130px;
+        filter:grayscale(80%);
+    }
+
+    .logo_menu li:nth-child(2){
+        margin-right: 20%;
     }
 
     .logo_menu img{
-        margin-top: -25px;
-    }
-
-    .titres, .filtres, .ecx{
-        align-items: center;
-        margin-left: 20%;
-        margin-right: 20%;
-        width: 50%;
+        margin-top: -10px;
+        padding-bottom: 0;
     }
 
     .recherche{
-        align-self: center;
-        margin-left: 20%;
-        margin-right: 20%;
-        width: 55%;
+        font-size: 20px;
+    }
+
+    .recherche button{
+        border-radius: 12px;
+        display: contents;
+    }
+
+    .recherche button::after{
+        content: "\f002";
+        position: relative;
+        font-family: "Font Awesome 5 Free";
+        font-size: 16px;
+        margin-left: -20px;
+        font-weight: bold;
+        border-radius: 15px;
+        border: 15px solid #0065fc;
+        background-color: #0065fc;
+   }
+
+    #recherche{
+        font-size: 16px;
+        font-weight:bold;
+        margin-left: 30px;
+        text-shadow: -2px -1px rgb(0, 0, 0);
+   }
+
+    i.fas.fa-map-marker-alt{
+       transform: scale(1.1);
+       border: 0.1px solid rgba(0, 0, 0, 0);
+       background-color: rgba(0, 0, 0, 0.123);
+       width: 34px;
+       height: 34px;
+   }
+
+    .filtres{
+        margin-bottom: 35px;
+        margin-top: 35px;
+        width: 350px;
+        font-size: 20px;
+        grid-gap:15px;
+        align-items: center;
+        display: grid;
+    }
+
+    .filtres label{
+        font-weight:800;
+        position: relative;
+    }
+
+    .filtres button{
+        height: 48px;
+        width: 150px;
+        border-radius: 25px;
+        box-shadow: 0.1px 0.1px 1.8px 0.1px;
+        background-color: white;
+    }
+
+    .filtres i{
+        width: 55px;
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background-color:#dfe5ee;
+        box-sizing: border-box;
+        transform: translateX(-8px);
+    }
+
+    .filtres button:nth-child(5){
+        width: 230px;
+        margin-bottom: 15px;
+    }
+
+    .filtres button:nth-child(3){
+        position: relative;
+        margin-left: 60%;
+        margin-top:-50px;
+    }
+
+    .filtres button:nth-child(2){
+        margin-bottom: -15px;
+        margin-right: 15px;
+        width: 165px;
+    }
+
+    i.fas.fa-money-bill-wave{
+        padding-top: 13px;
+        margin-left: -6px;
+        margin-top: -2px;
+    }
+
+    i.fas.fa-heart{
+        margin-left: -15px;
+        padding-top: 10px;
+    }
+
+    i.fas.fa-child{
+        margin-left: -25px;
+    }
+
+    i.fas.fa-dog{
+        margin-top:-2px;
+        margin-left: -25px;
+    }
+
+    .hd p{
+        filter:blur(0.30px);
+        width: 380px;
+        font-size: 18px;
+        margin-bottom: -20px;
+        padding-left: 25px;
     }
 
     .exclamation{
-        margin-left: 35px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 25px;
+        float: left;
     }
 
     /* id main à 2 colonnes de 3 lignes */
 
-    #main{
-        margin-bottom: 2rem;
-        height: 3fr;
-        width: 700px;
+    .bg_main{
+        height: auto;
+        width: 400px;
+        position: relative;
+        margin-top: 900px;
+    }
+
+    .bg_main h1{
+        margin-left:0;
+        font-size: 25px;
+        font-weight: 800;
+        padding-left: 1rem;
+    }
+
+    .bg_main h3{
+        margin-top:45px;
+        margin-bottom: -20px;
+    }
+
+    #main {
+        box-sizing: border-box;
+        justify-content:space-between;
+    }
+
+    #main img{
+        width: 98%;
+    }
+
+    #main h5{
+        font-weight:800;
+        font-size: 16px;
     }
 
     .La_Cannebiere, .Hotel_du_port, .Les_mouettes, .Hotel_de_la_mer, .Le_Panier, .Chez-Amina{
-        margin-bottom: 1rem;
-        grid-gap: 1fr;
-        margin-bottom: 1rem;
+        width: 365px;
     }
 
     .La_Cannebiere{
@@ -690,44 +845,75 @@ input{
     } 
     
     .Hotel_du_port{
-        grid-area:1/2/2/3;
-    } 
-    
-    .Hotel_de_la_mer{
         grid-area:2/1/3/2;
     } 
     
+    .Hotel_de_la_mer{
+        grid-area:4/1/5/2;
+    } 
+    
     .Le_Panier{
-        grid-area:2/2/3/3;
+        grid-area:5/1/6/2;
     }
+
     .Les_mouettes{
         grid-area: 3/1/4/2;
     }
 
     .Chez-Amina{
-        grid-area: 3/2/4/3;
+        grid-area: 6/1/7/2;
     }
 
 
     /* le sb en display block */
     
+    .bg_sd{
+        margin-top: -2934px;
+        padding-top: 0px;
+        position: absolute;
+        width: 400px;
+    }
+
+    .bg_sd h1{
+        font-size:25px ;
+        font-weight: 800;
+        padding-top: 1rem;
+    }
+
     .sidebar{
-        height: 3fr;
         display: block;
-        margin-bottom: 1fr;
+        margin-bottom: 1rem;
         grid-gap: 1rem;
-        align-items: center;
-        width: auto;
+        width: 90%;
+        height: 3fr;
+    }
+
+    i.fa.fa-chart-line{
+        /* font-weight:800; */
+        font-size: 25px;
+    }
+
+    .prix1, .prix2, .prix3{
+        font-weight: 300;
+        padding-right: 25px;
+    }
+
+    .nom1, .nom2, .nom3{
+        font-weight:900;
+        padding-top: 20px;
+        padding-right: 30px;
     }
 
     .Soleil_du_matin{
         grid-area: 1/1/2/3;
         height: 1fr;
     }
+
     .Au_coeur_de_leau{
         grid-area: 2/1/3/2;
         height: 1fr;
     }
+
     .Tout_bleu_et_blanc{
         grid-area: 2/2/3/3;
         height: 1fr;
@@ -735,59 +921,84 @@ input{
 
     /* l'id section à 2 colonnes de 3 lignes */
     
-    .bg_section{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    .bg_sec{
+        width: 400px;
+        padding-left: 1rem;
+    }
+    
+    .bg_sec h1{
+        margin-bottom: 35px;
     }
 
-    #section {
+    #section img{
         margin-bottom: 1fr;
-        height: 3fr;
+        width: 90%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #section .titre_carte{
+        padding-top: 0.5rem;
+        padding-bottom: 0.1rem;
+        box-shadow: 0px 5px 5px #f2f2f2;
+        border-radius: 15px;
+    }
+
+    #section h5{
+        margin-top: 35px;
+        font-weight:800;
+        font-size: 16px;
     }
 
     .Fort_Pomegues {
-        grid-area: 1/2/2/3;
-        height: 1fr;
+        grid-area: 2/1/3/2;
     }
 
     .Iles_du_Frioul {
-        grid-area: 2/2/3/3;
-        height: 1fr;
-        margin-top: 20px;
+        grid-area: 3/1/4/2;
+        margin-top: 50px;
     }
 
     .ND_de_Garde {
-        grid-area: 2/1/3/2;
-        height: 1fr;
-        margin-top: 20px;
+        grid-area: 5/1/6/2;
+        margin-top: 50px;
     }
 
     .Longchamp {
-        grid-area:3/2/4/3;
-        height: 1fr;
-        margin-top: 20px;
+        grid-area:6/1/7/2;
+        margin-top: 50px;
     }
 
     .vieux_Port {
         grid-area: 1/1/2/2;
-        height: 1fr;
+        margin-bottom: 50px;
     }
 
     .Parc_des_Calanques {
-        grid-area:3/1/4/2 ;
-        height: 1fr;
-        margin-top: 20px;
+        grid-area:4/1/5/2 ;
+        margin-top: 50px;
     }
 
     /* footer avec margin-top à 280px */
 
-    .footer{
+    .ft{
+        width: 380px;
+        padding-top: 80px;
+        padding-left: 1rem;
         margin-top: 280px;
-        justify-content:space-between;    
-        text-align: left;
-        height: 100%;
-        width: 80%;
-        grid-gap:50px;  
+    }
+    .footer{
+        margin-top: 650px;
+        display: block;
+        padding-left: 0;
+        border-radius: 15px;
+        width: auto;
+    }
+
+    .footer h5{
+        font-weight:800;
+        font-size: 16px;
+        padding-top: -45px;
     }
 }
 
