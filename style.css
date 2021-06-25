@@ -3,17 +3,11 @@ body {
     font-family: Raleway;
 }
 
-.rows{
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
+.container{
+    margin: auto;
     max-width: 1400px;
     width: 90%;
 }
-
-
-/* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
-
 
 .hd{
     grid-area: 1/1/2/12;
@@ -21,46 +15,30 @@ body {
     padding-bottom: 1rem;
 }
 
-.hd i{
-    border-radius: 50%;
-    background-color:#0065fc;
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
-}
-
-.liseret{
-    position: relative;
-    border: 3px solid #0065fc;
-    width: 150px;
-    margin-top: 0;
-    margin-left: 69%;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom: 0;
-}
-
-.logo_menu img{
-    margin-bottom: -15px;
-    padding-left: auto;
-    height: 4rem;
-    width: auto;
-}
-
 .logo_menu{
-    display: flex;
-    margin-bottom: 0.5px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.logo_menu .inscrire{
+    float: right;
+}
+
+.logo_menu .hebergement{
+    opacity: 0.8;
+}
+
+.logo_menu .activites{
+    filter:grayscale(80%);
 }
 
 .logo_menu ul {
     list-style-type: none;
     display: flex;
-    margin-top: 1rem;
-    margin-left: auto;
-    width: 400px;
-    justify-content: space-between;
-    margin-right: 1rem;
+    float:right;
+    grid-gap: 70px;
+    margin-top:0;
+    width: 30%;
 }
 
 .logo_menu a{
@@ -69,19 +47,23 @@ body {
     font-weight: bold;
 }
 
-.disabled:nth-child(2) a{
-    color:grey;
-}
-
-a:hover{
+.logo_menu a:hover{
     text-transform: uppercase;
     color: grey;
     transition: all 1s;
 }
 
+.liseret{
+    border:none;
+    border: 0.5px solid #0065fc;
+    width: 190px;
+    margin-top: -60px;
+    float: right;
+    margin-right:295px;
+}
+
 h6{
     margin-top: 0;
-    filter:blur(0.70px);
     margin-top: -15px;
 }
 
@@ -101,25 +83,19 @@ input{
 }
 
 .filtres i{
-    width: 30px;
     background: #deebff; 
     color:#0065fc;
     border-radius: 20px;
-    border: 0.1rem solid #deebff;
-    margin-right: auto;
-    height: 20px;
-    text-align: center;
+    border: 10px solid #deebff;
     vertical-align: middle;
-    padding-top: 5px;
-    margin-left: -5px;
 }
 
 .filtres button{
     border-radius: 20px;
     border: 0.1rem solid #F2F2F2;
+    border-left: none;
     font-weight: bold;
     height: 30px;
-    margin-left: 5px;
     transition: all 0.3s;
 }
 
@@ -170,18 +146,12 @@ input{
     padding-top: 5px;
 }
 
-.exclamation{
-    color:#0065fc;
-    font-weight: bold;
-    filter:blur(0.70px);
-    margin-right: 10px;
+i.fas.fa-info{
     background-color: lightyellow;
-    border-radius: 50px;
-    border: 5px solid #F2F2F2;
-}
-
-.hd p{
-    filter:blur(0.70px);
+    border: 2px solid #F2F2F2;
+    color: #0065fc;
+    font-size: x-small;
+    padding:5px;
 }
 
 
@@ -195,7 +165,8 @@ input{
     border-radius: 15px;
     margin-right: 1rem;
     border-radius: 15px;
-    background-color: #F2F2F2;  
+    background-color: #F2F2F2; 
+    width: 90%; 
 }
 
 .bg_main h1{
@@ -275,9 +246,13 @@ input{
 
 /* §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ */
 
+.bloc1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .bg_sd{
-    grid-area: 2/8/3/12;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 15px;
@@ -304,11 +279,7 @@ input{
     margin-left: 1rem;
     margin-right: 1rem;
     border-radius: 15px;
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-rows: minmax(300px, auto);
     margin: 1rem;
-    display: grid;
-    grid-gap:20px;
 }
 
 .sidebar img{
@@ -391,7 +362,6 @@ input{
 }
 
 #section{
-    margin-right: 1rem;
     margin-top: 15px;
     border-radius: 15px;
     box-sizing:border-box;
@@ -519,32 +489,36 @@ input{
 
 
 @media screen and (max-width: 1200px){
-    body {
-        padding: 2rem 2rem;
-    }
-
-    .rows{
+    
+    .container{
         display: block;
+    }
+    
+    .logo_menu ul{
+       width: 34%;
     }
 
     .liseret{
-        position: relative;
+        border:none;
         border: 0.5px solid #0065fc;
-        width: 25%;
-        margin-top: 0;
-        margin-left: 45%;
-        border-bottom: none;
-        border-left: none;
-        border-right: none;
-        margin-bottom: 0;
+        width: 181px;
     }
 
     /* sd toujours en flex et img en float */
+    
+    .bloc1{
+        flex-direction: column;
+    }
+
+    .bg_main{
+        width: 100%;
+    }
 
     .bg_sd{
         padding-top: 1rem;
         margin-top: 1rem;
         border-radius: 15px;
+        margin:auto;
     }
 
     .sidebar{
@@ -620,207 +594,149 @@ input{
 
 @media all and (max-width:700px){
 
-    .rows{
-        width: 450px;
-        box-sizing: border-box;
-    }
-
     .hd{
-        /* margin-left: 25px; */
-        width: 380px;
+        width: 90%;
+        margin: auto;
     }
-
-    .hd h1{
-        width: 320px;
-    }
-
+    
     h6{
         filter:blur(0.50px);
         margin-top: 15px;
         font-size: 18px;
-        width: 460px;
     }
 
     .liseret{
         border: none;
-        position: relative;
         border-bottom: 3px solid #0065fc;
-        top: 90px;
-        margin-left: -20px;
-        width: 200px;
+        margin-left: 0;
+        width: 45%;
     }
 
-    .logo_menu{
-        padding-left: 0;
-        transition: 0.2s;
+    .hd h1{
+        margin-top:50px;
+        font-weight: 800;
     }
 
-    .logo_menu ul{
-        flex-wrap: wrap-reverse;
-        grid-gap: 25px;
-        width: 250px;
-    }
-
-    .logo_menu li:nth-child(3){
-        margin-left: 150px;
-    }
-
-    .logo_menu li:nth-child(1){
-        margin-left: -130px;
-        filter:grayscale(80%);
-    }
-
-    .logo_menu li:nth-child(2){
-        margin-right: 20%;
+    h1 .titre{
+        margin-bottom: -5px;
     }
 
     .logo_menu img{
-        margin-top: -10px;
-        padding-bottom: 0;
+        float:left;
+        margin-right: 40%;
+        margin-top:-15px;
+    }
+
+    .logo_menu .inscrire{
+        float: right;
+    }
+    
+    .logo_menu ul{
+        padding-top:32px;
+        grid-gap:200px;
+        width: 95%;
+        /* justify-content:space-between */
+    }
+
+    .logo_menu .activites{
+        filter:grayscale(80%);
+    }
+
+    .liseret{
+        margin-top:0;
+        /* width: 200px; */
     }
 
     .recherche{
         font-size: 20px;
-        width: 355px;
-        margin-right:0;
-    }
-    .recherche input{
-        width: 200px;
     }
 
     .recherche button{
         border-radius: 12px;
         display: contents;
+        font-size: 0;
     }
 
     .recherche button::after{
         content: "\f002";
-        position: relative;
         font-family: "Font Awesome 5 Free";
         font-size: 16px;
-        margin-left: -30px;
+        margin-left: -40px;
         font-weight: bold;
-        border-radius: 15px;
+        border-radius: 20px;
         border: 15px solid #0065fc;
         background-color: #0065fc;
+        padding:5px;
    }
 
     #recherche{
-        font-size: 16px;
+        font-size: 20px;
         font-weight:bold;
-        margin-left: 30px;
-        text-shadow: -2px -1px rgb(0, 0, 0);
    }
+
+    .recherche input{
+        width: calc(100% - 74px);
+    }
 
     i.fas.fa-map-marker-alt{
        transform: scale(1.1);
        border: 0.1px solid rgba(0, 0, 0, 0);
        background-color: rgba(0, 0, 0, 0.123);
-       width: 34px;
+       font-size: 25px;
        height: 34px;
-   }
-
-    .filtres{
-        margin-bottom: 35px;
-        margin-top: 35px;
-        width: 350px;
-        font-size: 20px;
-        grid-gap:15px;
-        align-items: center;
-        display: grid;
+       padding:5px;
     }
 
-    .filtres label{
-        font-weight:800;
-        position: relative;
+    .filtres{
+        display: block;
+        flex-wrap: wrap;
+        justify-content:space-between;
     }
 
     .filtres button{
-        height: 48px;
-        width: 150px;
-        border-radius: 25px;
-        box-shadow: 0.1px 0.1px 1.8px 0.1px;
+        border-radius: 2rem;
+        border: 1px solid gray;
         background-color: white;
+        align-items: center;
+        padding-right: 15px;
+        height: 40px;
+        margin-bottom: 20px;
+   }
+
+   .filtres button:nth-child(3){
+       display: flex;
+       margin-right: auto;
+   }
+
+    .filtres span{
+        margin-right:10px;
+        margin-left: -8px;
     }
 
-    .filtres i{
-        width: 50px;
-        height: 55px;
-        font-size: 26px;
-        position: relative;
-        background-color:#dfe5ee;
-        box-sizing: border-box;
-        transform: translateX(-11px);
-        clip-path: circle();
-        margin-top:-6px;
+    .filtres span i{
+        font-size: 17px;
     }
 
-    .filtres button:nth-child(5){
-        width: 230px;
-        margin-bottom: 15px;
-    }
 
-    .filtres button:nth-child(3){
-        position: relative;
-        margin-left: 60%;
-        margin-top:-50px;
-    }
-
-    .filtres button:nth-child(2){
-        margin-bottom: -15px;
-        margin-right: 15px;
-        width: 165px;
-    }
-
-    i.fas.fa-money-bill-wave{
-        padding-top: 13px;
-        margin-left: -6px;
-    }
-
-    i.fas.fa-heart{
-        margin-left: -15px;
-        padding-top: 10px;
-    }
-
-    i.fas.fa-child{
-        margin-left: -25px;
-    }
-
-    i.fas.fa-dog{
-        margin-left: -25px;
-        transform: translateX(-11px);
-    }
-
-    .hd p{
-        filter:blur(0.30px);
-        width: 380px;
-        font-size: 18px;
-        padding-left: 25px;
+    .hd h3{
+        margin-top: 40px;
     }
 
     .exclamation{
-        font-size: 15px;
-        width: 20px;
-        font-weight: bold;
         float: left;
-        background-color: #f2f2f2;
-        transform: translateX(-15px);
-    }
-
-    p label{
-        padding-left: 8px;
-        font-weight: bold;
-        font-size: 20px;
+        margin-right: 15px;
     }
 
     /* id main à 2 colonnes de 3 lignes */
 
-    .bg_main{
-        height: auto;
-        width: 400px;
-        position: relative;
-        margin-top: 800px;
+    .bloc1{
+        flex-direction: column-reverse;
     }
+    
+    .bg_main{
+        width: 100%;
+        margin-top: 15px;
+   }
 
     .bg_main h1{
         margin-left:0;
@@ -831,25 +747,18 @@ input{
 
     .bg_main h3{
         margin-top:45px;
-        margin-bottom: -20px;
+        padding-bottom: 15px;
     }
 
     #main {
-        box-sizing: border-box;
-        justify-content:space-between;
-    }
-
-    #main img{
-        width: 98%;
+        display: flex;
+        flex-direction: column;
+        margin:auto;
     }
 
     #main h5{
         font-weight:800;
         font-size: 16px;
-    }
-
-    .La_Cannebiere, .Hotel_du_port, .Les_mouettes, .Hotel_de_la_mer, .Le_Panier, .Chez-Amina{
-        width: 365px;
     }
 
     .La_Cannebiere{
@@ -879,30 +788,24 @@ input{
 
     /* le sb en display block */
     
+    
     .bg_sd{
-        margin-top: -2860px;
-        padding-top: 0px;
-        position: absolute;
-        width: 400px;
+        margin: auto;
+        width: 100%;
     }
 
     .bg_sd h1{
-        font-size:25px ;
         font-weight: 800;
         padding-top: 1rem;
     }
 
-    .sidebar{
-        display: block;
-        margin-bottom: 1rem;
-        grid-gap: 1rem;
-        width: 90%;
-        height: 3fr;
+    i.fa.fa-chart-line{
+        font-size: 25px;
     }
 
-    i.fa.fa-chart-line{
-        /* font-weight:800; */
-        font-size: 25px;
+    .sidebar{
+        flex-direction: column;
+        margin:auto;
     }
 
     .prix1, .prix2, .prix3{
@@ -918,24 +821,27 @@ input{
 
     .Soleil_du_matin{
         grid-area: 1/1/2/3;
-        height: 1fr;
     }
 
     .Au_coeur_de_leau{
         grid-area: 2/1/3/2;
-        height: 1fr;
     }
 
     .Tout_bleu_et_blanc{
         grid-area: 2/2/3/3;
-        height: 1fr;
     }
 
     /* l'id section à 2 colonnes de 3 lignes */
     
+    .bloc2{
+        height: 85rem;
+    }
+    
     .bg_sec{
-        width: 400px;
-        padding-left: 1rem;
+        height: auto;
+        width: 90%;
+        flex-direction: column;
+        margin: auto;
     }
     
     .bg_sec h1{
@@ -943,16 +849,14 @@ input{
     }
 
     #section img{
-        margin-bottom: 1fr;
-        width: 90%;
-        margin-top: 0;
-        padding-top: 0;
+        height: 100%;
+        width: 100%;
     }
 
     #section .titre_carte{
         padding-top: 0.5rem;
         padding-bottom: 0.1rem;
-        box-shadow: 0px 5px 5px #f2f2f2;
+        background-color: #f2f2f2;
         border-radius: 15px;
     }
 
@@ -991,20 +895,9 @@ input{
         margin-top: 50px;
     }
 
-    /* footer avec margin-top à 280px */
-
-    .ft{
-        width: 380px;
-        padding-top: 80px;
-        padding-left: 1rem;
-        margin-top: 280px;
-    }
     .footer{
-        margin-top: 650px;
         display: block;
-        padding-left: 0;
         border-radius: 15px;
-        width: auto;
     }
 
     .footer h5{
@@ -1014,3 +907,30 @@ input{
     }
 }
 
+@media all and (max-width:300px){
+    
+    .logo_menu ul{
+        display: block;
+        
+    }
+
+    .logo_menu .inscrire{
+        float: none;
+        margin-bottom: 0;
+    }
+    
+    .liseret{
+        margin-right:18px;
+        width: 96%;
+    }
+
+    #recherche{
+        font-size: 13px;
+    }
+
+    #section{
+        margin-top: 0;
+        padding: 1rem;
+        height:0;
+    }
+}
