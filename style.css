@@ -4,24 +4,18 @@ body {
 }
 
 .container{
-    margin: auto;
     max-width: 1400px;
-    width: 90%;
 }
 
 .hd{
     grid-area: 1/1/2/12;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.logo_menu{
-    font-size: 20px;
-    width: 100%;
 }
 
 .logo_menu .inscrire{
-    float: right;
+    position:absolute;
+    top:26px;
+    right: 0;
+    padding-right:22px;
 }
 
 .logo_menu .hebergement{
@@ -36,9 +30,11 @@ body {
     list-style-type: none;
     display: flex;
     float:right;
-    grid-gap: 70px;
-    margin-top:0;
+    grid-gap: 30%;
+    /* margin-top:0; */
     width: 30%;
+    justify-content: flex-start;
+    padding-right:100px;
 }
 
 .logo_menu a{
@@ -55,11 +51,11 @@ body {
 
 .liseret{
     border:none;
-    border: 0.5px solid #0065fc;
-    width: 190px;
-    margin-top: -60px;
-    float: right;
-    margin-right:295px;
+    border-top: 3px solid #0065fc;
+    width: 209px;
+    position:absolute;
+    top:10px;
+    right:26%;
 }
 
 h6{
@@ -91,11 +87,11 @@ input{
 }
 
 .filtres button{
-    border-radius: 20px;
+    border-radius: 2rem;
     border: 0.1rem solid #F2F2F2;
     border-left: none;
     font-weight: bold;
-    height: 30px;
+    height: 35px;
     transition: all 0.3s;
 }
 
@@ -149,6 +145,7 @@ input{
 i.fas.fa-info{
     background-color: lightyellow;
     border: 2px solid #F2F2F2;
+    border-radius:20px;
     color: #0065fc;
     font-size: x-small;
     padding:5px;
@@ -495,13 +492,12 @@ i.fas.fa-info{
     }
     
     .logo_menu ul{
-       width: 34%;
+       /* width: 34%; */
     }
 
     .liseret{
-        border:none;
-        border: 0.5px solid #0065fc;
-        width: 181px;
+        width: 140px;
+        right: 28%;
     }
 
     /* sd toujours en flex et img en float */
@@ -595,30 +591,27 @@ i.fas.fa-info{
 @media all and (max-width:700px){
 
     .hd{
-        width: 90%;
         margin: auto;
     }
     
+    .liseret{
+        border: none;
+        border-bottom: 3px solid #0065fc;
+        top:95px;
+        left:9px;
+        width:215px;
+    }
+
+    .titres h1{
+        font-weight: 800;
+        line-height: 47px;
+        /* margin-bottom: -5px; */
+    }
+
     h6{
         filter:blur(0.50px);
         margin-top: 15px;
         font-size: 18px;
-    }
-
-    .liseret{
-        border: none;
-        border-bottom: 3px solid #0065fc;
-        margin-left: 0;
-        width: 45%;
-    }
-
-    .hd h1{
-        margin-top:50px;
-        font-weight: 800;
-    }
-
-    h1 .titre{
-        margin-bottom: -5px;
     }
 
     .logo_menu img{
@@ -629,22 +622,21 @@ i.fas.fa-info{
 
     .logo_menu .inscrire{
         float: right;
+        padding-right: 50px;
     }
     
     .logo_menu ul{
-        padding-top:32px;
-        grid-gap:200px;
-        width: 95%;
-        /* justify-content:space-between */
+        grid-gap:34px;
+        width: 86%;
+        line-height: 64px;
+        margin: 8px -47px 21px;
+        padding-left:10px;
+        padding-right:100px;
     }
 
     .logo_menu .activites{
         filter:grayscale(80%);
-    }
-
-    .liseret{
-        margin-top:0;
-        /* width: 200px; */
+        margin-left:50%;
     }
 
     .recherche{
@@ -834,14 +826,16 @@ i.fas.fa-info{
     /* l'id section à 2 colonnes de 3 lignes */
     
     .bloc2{
-        height: 85rem;
+        display:inline-block;
+        height: 83rem;
     }
     
     .bg_sec{
-        height: auto;
-        width: 90%;
-        flex-direction: column;
-        margin: auto;
+        /* height: auto; */
+        /* width: 100%; */
+        /* flex-direction: column; */
+        /* margin: auto; */
+        margin-bottom: 15px;
     }
     
     .bg_sec h1{
@@ -849,7 +843,7 @@ i.fas.fa-info{
     }
 
     #section img{
-        height: 100%;
+        /* height: auto; */
         width: 100%;
     }
 
@@ -858,6 +852,7 @@ i.fas.fa-info{
         padding-bottom: 0.1rem;
         background-color: #f2f2f2;
         border-radius: 15px;
+        width: 60%;
     }
 
     #section h5{
@@ -910,8 +905,8 @@ i.fas.fa-info{
 @media all and (max-width:300px){
     
     .logo_menu ul{
-        display: block;
-        
+        width: 0;
+        padding-right:312px;
     }
 
     .logo_menu .inscrire{
@@ -920,8 +915,9 @@ i.fas.fa-info{
     }
     
     .liseret{
-        margin-right:18px;
-        width: 96%;
+        width: 236px;
+        top:92px;
+        left:20px;
     }
 
     #recherche{
