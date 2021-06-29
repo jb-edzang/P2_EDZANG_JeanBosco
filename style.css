@@ -2,11 +2,10 @@
 body {
     font-family: Raleway;
     margin: auto;
-
 }
 
 .container{
-    /* max-width: 1400px; */
+    max-width: 1400px;
 }
 
 .hd{
@@ -251,6 +250,7 @@ i.fas.fa-info{
 }
 
 .bg_sd{
+    grid-area:2/8/3/12;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 15px;
