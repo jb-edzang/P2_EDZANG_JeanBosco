@@ -6,6 +6,8 @@ body {
 
 .container{
     max-width: 1400px;
+    position:relative;
+    margin:auto;
 }
 
 .hd{
@@ -16,6 +18,7 @@ body {
     position:absolute;
     top:25px;
     right:20px;
+    z-index: 3;
 }
 
 .logo_menu .hebergement{
@@ -108,7 +111,6 @@ input{
     height: 19px;
     float: left;
     border-radius: 10px;
-    border: 0.1rem solid #F2F2F2;
     background: #0065fc; 
     margin-bottom: -4px;
 }
@@ -122,6 +124,7 @@ input{
     border-bottom-left-radius: 0;
     height: 33px;
     margin-left: -10px;
+    border: none;
 }
 
 .recherche input{
@@ -204,7 +207,7 @@ i.fas.fa-info{
     background-color: white;
     box-sizing: border-box;
     width: auto;
-    height: 280px;
+    height: 300px;
     padding-right: 8px;
 }
 
@@ -490,6 +493,7 @@ i.fas.fa-info{
     
     .container{
         display: block;
+        width: 96%;
     }
 
     .hd{
