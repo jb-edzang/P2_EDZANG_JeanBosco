@@ -65,6 +65,10 @@ header h3{
     margin-bottom: 15px;
 }
 
+.recherche{
+    width:80%;
+}
+
 i.fas.fa-map-marker-alt{
     transform: scale(1.1);
     border: 0.1px solid rgba(0, 0, 0, 0);
@@ -156,10 +160,10 @@ i.fas.fa-info{
     background: #deebff; 
     color:#0065fc;
     border-radius: 25px;
-    border:14px solid #deebff;
+    border:15px solid #deebff;
     vertical-align: middle;
-    font-size: 20px;
-    height: 24px;
+    font-size: 19px;
+    height: 23px;
     margin-right: 3px;
     margin-left: -5px;
 }
@@ -184,6 +188,7 @@ i.fas.fa-info{
     height: 150px;
     border-radius: 15px;
     box-sizing:border-box;
+    object-fit: cover;
 }
 
 .bg_sd{
@@ -329,31 +334,43 @@ i.fa.fa-chart-line{
 
 /* bloc2 */
 
+.bloc2 img{
+    height:150px;
+    object-fit: cover;
+}
+
 .bloc2 h2{
     padding-left: 10px;
 }
 
+.bg_sec{
+    margin-top: 50px;
+}
+
+#section{
+    grid-gap: 20px;
+    display:grid;
+}
+
 #section img{
-    width: 90%;
-    height: 160px;
+    width: 100%;
     border-radius: 15px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     display: grid;
     margin: auto;
-    background-color:white;
 }
 
 #section .titre_carte{
     padding-left: 35px;
     font-size:20px;
     margin-top:-12px;
-    height:60px;
+    height:31px;
 }
 
-.vieux_port, .Fort_Pomegues, .Iles_du_Frioul, .Parc_des_Calanques, .ND_de_Garde, .Longchamp{
-    background-color:white;
+.vieux_Port, .Fort_Pomegues, .Iles_du_Frioul, .Parc_des_Calanques, .ND_de_Garde, .Longchamp{
     border-radius:15px;
+    border-bottom:2px solid lightgrey;
 }
 
 /* bloc3 */
@@ -435,7 +452,7 @@ i.fa.fa-chart-line{
 
     .filtres i{
         border: 13px solid #deebff; 
-        font-size: 17px;
+        font-size: 10px;
         height: 11px;
     }
 
@@ -494,42 +511,37 @@ i.fa.fa-chart-line{
 
     .bg_sec{
         grid-area:4/1/5/12;
-        width: 100%;  
         margin:50px 0; 
     }
 
     #section{
         display: grid;
-        justify-content: space-around;
-        align-items: center;
-        height: 500px;
     }
 
     #section img{
         box-sizing: border-box;
         object-fit: cover;
-        width: 90%;
-        height: 100%;
+        width: 100%;
     }
 
+    .vieux_Port, .Fort_Pomegues, .Iles_du_Frioul, .Parc_des_Calanques, .ND_de_Garde, .Longchamp{
+        border-radius: 15px;
+    }
+    
     .Fort_Pomegues{
         grid-area: 1/2/2/3;
-        height: 200px;
     }
 
     .Iles_du_Frioul{
         grid-area: 3/2/4/3;
-        height: 200px;
     }
     
     .ND_de_Garde{
         grid-area: 1/4/2/5;
-        height: 200px;
     }
     
     .Longchamp{
         grid-area: 3/4/4/5;
-        height: 200px;
     }
     
     .vieux_Port{
@@ -542,23 +554,35 @@ i.fa.fa-chart-line{
         height: 500px;
     }
 
-    .vieux_Port img{
-        height: 500px;
+    .small_grid img{
+        height: 150px;
     }
-    
-    .Parc_des_Calanques img{
-        height: 500px;
+
+    .height_grid img{
+        height: 450px;
+    }
+
+    .bloc3{
+        display:inline;
     }
 
     .bg_ft{
         grid-area:5/1/6/12;
-        width: 100%;
+        background-color:#f2f2f2;
+        width: 1300px;
+        margin-left:-50px;
     }
 
     .footer{
         display: flex;
         justify-content: space-between;
-        width: 75%;
+        width: 63%;
+        margin-left:20px;
+    }
+
+    .footer .info_assistance{
+        display:inline-block;
+        margin-left:100px;
     }
 }
 
