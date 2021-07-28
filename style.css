@@ -108,7 +108,7 @@ input:-ms-input-placeholder {
 .recherche .btn_alterne::after{
     content: "\f002";
     font-family: "Font Awesome 5 Free";
-    margin-left: 33px;
+    /* margin-left: 33px; */
     font-weight: bold;
     border-radius: 14px;
     border: 15px solid #0065fc;
